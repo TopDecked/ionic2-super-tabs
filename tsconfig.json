@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ionic-super-tabs": [
+        "dist/ionic-super-tabs"
+      ],
+      "ionic-super-tabs/*": [
+        "dist/ionic-super-tabs/*"
+      ]
+    }
   }
 }
