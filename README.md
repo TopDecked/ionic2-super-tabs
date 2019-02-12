@@ -17,28 +17,18 @@ This branch is for the updated version of Super Tabs that supports Ionic 4 appli
 <super-tabs [config]="config" (tabChange)="onTabChange($event)">
   <super-tabs-container>
     <super-tab>
-    
-      <!-- 
-        # You can pass anything to a super tab including an ion-nav
-         -->
-      <ion-nav [root]="myPage" [rootParams]="myParams" />
+      <!-- You can pass anything to a super tab including an ion-nav -->
+      <!-- If you choose to pass an ion-nav, it will be controlled and optimized by super-tab -->
+      <ion-nav [root]="myPage" [rootParams]="myParams"></ion-nav>
     </super-tab>
     <super-tab>...</super-tab>
     <super-tab>...</super-tab>
-    
-    <!-- 
-      # ability to dynamically add or remove tabs
-       -->
-    <super-tab *ngFor="let tab of tabs">
-      ...
-    </super-tab>
+    <!-- ability to dynamically add or remove tabs -->
+    <super-tab *ngFor="let tab of tabs">...</super-tab>
   </super-tabs-container>
   
   <super-tabs-toolbar>
-  
-    <!-- 
-      # Listen to click events on any tab button
-       -->
+    <!-- Listen to click events on any tab button -->
     <super-tab-button (click)="onTabClick($event)">
       <ion-label>Call</ion-label>
       <ion-icon name="call"></ion-icon>
