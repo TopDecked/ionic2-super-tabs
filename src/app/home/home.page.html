@@ -1,12 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<super-tabs>
+  <super-tabs-container>
+    <super-tab *ngFor="let page of pages">
+      <ion-nav [root]="page.root" [rootParams]="page.rootParams"></ion-nav>
+    </super-tab>
+  </super-tabs-container>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-</ion-content>
+  <super-tabs-toolbar>
+    <super-tab-button *ngFor="let page of pages">
+      <ion-icon [name]="page.icon"></ion-icon>
+      <ion-label>{{ page.name }}</ion-label>
+    </super-tab-button>
+  </super-tabs-toolbar>
+</super-tabs>

@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  flex-flow: row nowrap;
+  min-width: var(--super-tab-width, 100%);
+  height: 100%;
+  width: 1000px;
+  position: relative;
+}
